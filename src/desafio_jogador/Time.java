@@ -39,6 +39,14 @@ public class Time {
 		return art;
 	}
 	
+	public int getGolsTime() {
+		int gols = 0;
+		for(Jogador j : jogadores ) {
+			gols += j.getGols();
+		}
+		return gols;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
