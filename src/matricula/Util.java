@@ -16,5 +16,16 @@ public class Util {
 		int escolha = Integer.parseInt(JOptionPane.showInputDialog(menuAl));
 		return lista.get(escolha-1);
 	}
+	
+	public static Disciplina selecionaDisciplina (ArrayList<Disciplina> lista) {
+		String menuD = "";
+		int cont = 1;
+		for (Disciplina d : lista) {
+			menuD = cont + " - " + d.getNome()+"\n";
+			cont ++;
+		}
+		int escolha = Integer.parseInt(JOptionPane.showInputDialog(menuD));
+		return lista.get(escolha-1);
+	}
 
 }

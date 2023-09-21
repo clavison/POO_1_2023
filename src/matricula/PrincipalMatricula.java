@@ -28,6 +28,12 @@ public class PrincipalMatricula {
 				a.cadastra();
 				alunos.add(a);
 				break;
+			case 4:
+				matricula();
+				break;
+			case 5:
+				informarNota();
+				break;
 
 			
 			}
@@ -38,12 +44,28 @@ public class PrincipalMatricula {
 		String menu = "1 - Cadastrar Professores\n"
 				+ "2 - Cadastrar Disciplinas\n"
 				+ "3 - Cadastrar Alunos\n"
+				+ "4 - Matricular\n"
+				+ "5 - Informar Notas\n"
 				+ "10 - Sair";
 		return Integer.parseInt(JOptionPane.showInputDialog(menu));
 	}
 	
 	public static void matricula() {
 		Aluno a = Util.selecionaAluno(alunos);
+		Disciplina d =  Util.selecionaDisciplina(disciplinas);
+		a.getDiscMatriculadas().add(d);
+	}
+	
+	public static void informarNota() {
+		Aluno a = Util.selecionaAluno(alunos);
+		Disciplina d =  Util.selecionaDisciplina(a.getDiscMatriculadas());
+		Nota n = new Nota();
+		n.setDisc(d);
+		n.setN1(Double.parseDouble(JOptionPane.showInputDialog("Nota 1")));
+		n.setN2(Double.parseDouble(JOptionPane.showInputDialog("Nota 2")));
+		n.setN3(Double.parseDouble(JOptionPane.showInputDialog("Nota 3")));
+		a.getNotas().add(n);
+		
 	}
 
 }
