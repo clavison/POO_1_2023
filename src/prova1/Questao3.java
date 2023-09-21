@@ -2,6 +2,7 @@ package prova1;
 
 public class Questao3 {
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Instrumento i1 = new Instrumento();
 		i1.cadastra("Gaita","Percursão");
