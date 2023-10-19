@@ -10,6 +10,7 @@ public class Banda {
 	private ArrayList<Instrumento> instrumentos = new ArrayList<Instrumento>();
 
 	public void cadastra(String nome, String genero, int integrantes) {
+		this.instrumentos.add(new Instrumento());
 		this.nome = nome;
 		this.genero = genero;
 		this.nrIntegrantes = integrantes;

@@ -3,8 +3,8 @@ package prova1;
 public class Instrumento {
 
 	private String nome;
-	private String tipo = "Cordas";
-	public static char afinado = 'N';
+	private String tipo = "Percurssão";
+	public static char afinado = 'S';
 	
 	public void cadastra(String nome, String tipo) {
 		this.nome = nome;
